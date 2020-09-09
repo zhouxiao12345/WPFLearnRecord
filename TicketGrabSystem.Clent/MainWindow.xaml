@@ -1,0 +1,61 @@
+﻿<Window x:Class="TicketGrabSystem.Clent.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:TicketGrabSystem.Clent"
+        mc:Ignorable="d"
+        Title="{Binding TicketSoftware.Name,StringFormat=\{0\}-在线订票}" 
+        Height="450" Width="600" WindowStartupLocation="CenterScreen">
+    <Border BorderBrush="Blue" BorderThickness="3" CornerRadius="3" Background="LightBlue">
+        <Grid x:Name="Root" Margin="4">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="Auto"/>
+            </Grid.RowDefinitions>
+            <Border BorderBrush="Blue" BorderThickness="1" CornerRadius="1" Padding="4">
+                <StackPanel>
+                    <StackPanel Orientation="Horizontal">
+                        <StackPanel.Effect>
+                            <DropShadowEffect Color="LightGray"/>
+                        </StackPanel.Effect>
+                        <TextBlock Text="欢迎光临-" FontSize="45" FontFamily="Lishu"/>
+                        <TextBlock Text="{Binding TicketSoftware.Name}" FontSize="45" FontFamily="Lishu"/>
+                    </StackPanel>
+                    <StackPanel Orientation="Horizontal">
+                        <TextBlock Text="客服电话：" FontSize="22" FontFamily="Lishu"/>
+                        <TextBlock Text="{Binding TicketSoftware.Hotline}" FontSize="22" FontFamily="Lishu"/>
+                    </StackPanel>
+                </StackPanel>
+            </Border>
+            <DataGrid AutoGenerateColumns="False" GridLinesVisibility="None" 
+                      CanUserAddRows="False" CanUserDeleteRows="False" 
+                      Margin="0,4" Grid.Row="1" FontSize="16" ItemsSource="{Binding TicketItem}">
+                <DataGrid.Columns>
+                    <DataGridTextColumn Header="日期" Binding="{Binding Train.Date}" Width="80"/>
+                    <DataGridTextColumn Header="车次" Binding="{Binding Train.Number}" Width="80"/>
+                    <DataGridTextColumn Header="时间" Binding="{Binding Train.Time}" Width="80"/>
+                    <DataGridTextColumn Header="起始站" Binding="{Binding Train.StartStation}" Width="80"/>
+                    <DataGridTextColumn Header="终点站" Binding="{Binding Train.Terminal}" Width="80"/>
+                    <DataGridTextColumn Header="票价" Binding="{Binding Train.Money}" Width="80"/>
+                    <DataGridTemplateColumn Header="选择" SortMemberPath="IsSelected" Width="80">
+                        <DataGridTemplateColumn.CellTemplate>
+                            <DataTemplate>
+                                <CheckBox IsChecked="{Binding Path=IsSelected,UpdateSourceTrigger=PropertyChanged}"
+                                          VerticalAlignment="Center" HorizontalAlignment="Center"
+                                          Command="{Binding Path=DataContext.SelectItemCommand,
+                                    RelativeSource={RelativeSource Mode=FindAncestor,AncestorType={x:Type DataGrid}}}"/>
+                            </DataTemplate>
+                        </DataGridTemplateColumn.CellTemplate>
+                    </DataGridTemplateColumn>
+                </DataGrid.Columns>
+            </DataGrid>
+            <StackPanel Orientation="Horizontal" HorizontalAlignment="Right" Grid.Row="2">
+                <TextBlock Text="共计" VerticalAlignment="Center"/>
+                <TextBox IsReadOnly="True" TextAlignment="Center" Width="80" Text="{Binding Count}" Margin="4,0"/>
+                <Button Content="下单" Height="24" Width="80" Command="{Binding PlaceOrderCommand}"/>
+            </StackPanel>
+         </Grid>
+    </Border>
+</Window>
