@@ -13,14 +13,13 @@ namespace CrazyElephant.Client.ViewModel
         public Dish Dish { get; set; }
 
         private bool isSelected;
-
         public bool IsSelected
         {
-            get { return isSelected;; }
+            get { return isSelected; }
             set 
             { 
                 isSelected = value;
-                this.RaisePropertyChanged("IsSeleced");
+                this.RaisePropertyChanged("IsSelected");
             }
         }
 

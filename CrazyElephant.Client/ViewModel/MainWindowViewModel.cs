@@ -38,8 +38,6 @@ namespace CrazyElephant.Client.ViewModel
             }
         }
 
-        
-
         private List<DishMenuItemViewModel> dishMenu;
         public List<DishMenuItemViewModel> DishMenu
         {
