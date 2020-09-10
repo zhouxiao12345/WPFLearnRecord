@@ -10,7 +10,7 @@ namespace CrazyElephant.Client.Services
     {
         public void PlaceOrder(List<string> dishes)
         {
-            System.IO.File.WriteAllLines(@"F:\3-WPF\lesson5\order.txt", dishes.ToArray());
+            System.IO.File.WriteAllLines(@"F:\3-WPF\lesson5\CrazyElephant.Client\订单详情.txt", dishes.ToArray());
         }
     }
 }
