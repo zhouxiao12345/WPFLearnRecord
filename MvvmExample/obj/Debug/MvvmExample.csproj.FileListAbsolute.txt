@@ -1,0 +1,15 @@
+F:\3-WPF\lesson5\MvvmExample\bin\Debug\MvvmExample.exe.config
+F:\3-WPF\lesson5\MvvmExample\bin\Debug\MvvmExample.exe
+F:\3-WPF\lesson5\MvvmExample\bin\Debug\MvvmExample.pdb
+F:\3-WPF\lesson5\MvvmExample\obj\Debug\MvvmExample.csprojAssemblyReference.cache
+F:\3-WPF\lesson5\MvvmExample\obj\Debug\MainWindow.g.cs
+F:\3-WPF\lesson5\MvvmExample\obj\Debug\App.g.cs
+F:\3-WPF\lesson5\MvvmExample\obj\Debug\MvvmExample_MarkupCompile.cache
+F:\3-WPF\lesson5\MvvmExample\obj\Debug\MvvmExample_MarkupCompile.lref
+F:\3-WPF\lesson5\MvvmExample\obj\Debug\MainWindow.baml
+F:\3-WPF\lesson5\MvvmExample\obj\Debug\MvvmExample.g.resources
+F:\3-WPF\lesson5\MvvmExample\obj\Debug\MvvmExample.Properties.Resources.resources
+F:\3-WPF\lesson5\MvvmExample\obj\Debug\MvvmExample.csproj.GenerateResource.cache
+F:\3-WPF\lesson5\MvvmExample\obj\Debug\MvvmExample.csproj.CoreCompileInputs.cache
+F:\3-WPF\lesson5\MvvmExample\obj\Debug\MvvmExample.exe
+F:\3-WPF\lesson5\MvvmExample\obj\Debug\MvvmExample.pdb
